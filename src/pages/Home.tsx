@@ -3,12 +3,12 @@ import { useListSlotsQuery } from "../api/queries/slots";
 import { formatTimestamp } from "../helpers/TimeHelpers";
 
 const Home = () => {
-  const { data, loading } = useListSlotsQuery();
+  const { data } = useListSlotsQuery();
   return (
-    <div>
-      <h1>Home</h1>
+    <div className="container">
+      <h1 className="title">Time slots</h1>
       {data ? (
-        <table>
+        <table className="table is-bordered">
           <thead>
             <th>ID</th>
             <th>Start time</th>
@@ -25,7 +25,9 @@ const Home = () => {
           </tbody>
         </table>
       ) : null}
-      <Link to="/form">Form</Link>
+      <Link className="button is-primary" to="/form">
+        New time slot
+      </Link>
     </div>
   );
 };

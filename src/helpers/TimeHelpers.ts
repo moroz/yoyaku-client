@@ -1,3 +1,4 @@
 import dayjs from "dayjs";
 
-export const formatTimestamp = (unix: number) => dayjs.unix(unix).toISOString();
+export const formatTimestamp = (ts: string) =>
+  dayjs(ts).format("DD.MM.YYYY HH:mm");

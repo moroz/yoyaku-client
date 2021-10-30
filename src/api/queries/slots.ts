@@ -8,7 +8,7 @@ export const LIST_SLOTS = gql`
       id
       startTime
       endTime
-      createdAt
+      insertedAt
       updatedAt
     }
   }
