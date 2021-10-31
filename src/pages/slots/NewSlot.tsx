@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { SlotParams } from "../interfaces/slots";
-import DateTimeInput from "../components/DateTimeInput";
-import { useCreateSlotMutation } from "../api/mutations/slots";
+import { SlotParams } from "../../interfaces/slots";
+import DateTimeInput from "../../components/DateTimeInput";
+import { useCreateSlotMutation } from "../../api/mutations/slots";
 import dayjs from "dayjs";
-import CompositeDateTime from "../helpers/CompositeDateTime";
+import CompositeDateTime from "../../helpers/CompositeDateTime";
 import { useEffect } from "react";
 import { parse } from "graphql";
 
-const Form = () => {
+const NewSlot = () => {
   const defaultStartTime = dayjs().add(1, "day").hour(12).minute(0).second(0);
   const { register, handleSubmit, watch, setValue } = useForm<SlotParams>({
     defaultValues: {
@@ -85,4 +85,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default NewSlot;

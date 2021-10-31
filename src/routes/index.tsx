@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "../pages/Home";
-import Form from "../pages/Form";
+import NewSlot from "../pages/slots/NewSlot";
 
 export default function Routes() {
   return (
     <Router>
       <Route path="/" exact component={Home} />
-      <Route path="/form" exact component={Form} />
+      <Route path="/slots/new" exact component={NewSlot} />
     </Router>
   );
 }

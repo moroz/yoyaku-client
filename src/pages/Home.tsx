@@ -25,7 +25,7 @@ const Home = () => {
           </tbody>
         </table>
       ) : null}
-      <Link className="button is-primary" to="/form">
+      <Link className="button is-primary" to="/slots/new">
         New time slot
       </Link>
     </div>
